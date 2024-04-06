@@ -26,10 +26,11 @@ class HappinessLevelScreen extends HookConsumerWidget {
         centerTitle: true,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ...HappinessLevelKind.values.map(
-            (v) => RadioListTile(
+            (v) => RadioListTile<HappinessLevelKind>(
               value: v,
               title: Text(v.jp),
               groupValue: happinessLevelKind,
@@ -45,7 +46,9 @@ class HappinessLevelScreen extends HookConsumerWidget {
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
           ),
-          onPressed: happinessLevelKind == null ? null : () {},
+          onPressed: happinessLevelKind == null //
+              ? null
+              : ref.read(happinessViewModelProvider.notifier).goNext,
           child: const Text(
             '次へ',
             style: TextStyle(
