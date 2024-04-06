@@ -5,7 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:practice_flutter/domain/happiness/happiness_level_kind.dart';
-import 'package:practice_flutter/ui/happiness_level/happiness_view_model.dart';
+import 'package:practice_flutter/ui/happiness_level/happiness_level_view_model.dart';
 
 class HappinessLevelScreen extends HookConsumerWidget {
   const HappinessLevelScreen({
