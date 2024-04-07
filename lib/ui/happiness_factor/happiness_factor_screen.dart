@@ -18,7 +18,7 @@ class HappinessFactorScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final happinessLevelKind = ref.watch(happinessViewModelProvider.select((v) => v.happinessLevelKind));
-    final happinessFactorKind = ref.watch(happinessFactorViewModelProvider.select((v) => v.happinessFactorKind));
+    final happinessFactorKinds = ref.watch(happinessFactorViewModelProvider.select((v) => v.happinessFactorKinds));
 
     return Scaffold(
       appBar: AppBar(
@@ -32,11 +32,12 @@ class HappinessFactorScreen extends HookConsumerWidget {
             '要因は？',
           ),
           ...HappinessFactorKind.values.map(
-            (v) => RadioListTile<HappinessFactorKind>(
-              value: v,
+            (v) => CheckboxListTile(
+              value: happinessFactorKinds.contains(v),
               title: Text(v.jp),
-              groupValue: happinessFactorKind,
-              onChanged: ref.read(happinessFactorViewModelProvider.notifier).setHappinessFactorKind,
+              onChanged: (value) {
+                ref.read(happinessFactorViewModelProvider.notifier).setHappinessFactorKinds(isAdded: value, kind: v);
+              },
             ),
           ),
         ],
@@ -48,7 +49,7 @@ class HappinessFactorScreen extends HookConsumerWidget {
             backgroundColor: Colors.pink,
             foregroundColor: Colors.white,
           ),
-          onPressed: happinessFactorKind == null
+          onPressed: happinessFactorKinds.isEmpty
               ? null
               : () {
                   showDialog<void>(
@@ -59,7 +60,9 @@ class HappinessFactorScreen extends HookConsumerWidget {
                         title: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 24),
                           child: Text(
-                            '私は${happinessLevelKind.jp}。要因は${happinessFactorKind.jp}。',
+                            '私は${happinessLevelKind.jp}です。\n'
+                            '${happinessFactorKinds.map((v) => '- ${v.jp}').join('\n')}'
+                            '\nが要因です。',
                             style: const TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,

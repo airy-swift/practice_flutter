@@ -45,7 +45,9 @@ class HappinessLevelScreen extends HookConsumerWidget {
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
           ),
-          onPressed: happinessLevelKind == null ? null : () {},
+          onPressed: happinessLevelKind == null //
+              ? null
+              : ref.read(happinessViewModelProvider.notifier).goNext,
           child: const Text(
             '次へ',
             style: TextStyle(
