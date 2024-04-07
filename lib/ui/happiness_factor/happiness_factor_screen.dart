@@ -1,8 +1,4 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:practice_flutter/domain/happiness/happiness_factor_kind.dart';
 import 'package:practice_flutter/ui/happiness_factor/happiness_factor_view_model.dart';

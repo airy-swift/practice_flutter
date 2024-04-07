@@ -1,6 +1,3 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:practice_flutter/domain/happiness/happiness_level_kind.dart';
@@ -25,9 +22,7 @@ class HappinessViewModel extends ViewModel<HappinessLevelViewModelState> {
 
   void setHappinessLevelKind(HappinessLevelKind? kind) => state = state.copyWith.call(happinessLevelKind: kind);
 
-
   void goNext() {
     router.push(HappinessFactorScreen.routePath);
   }
 }
-
