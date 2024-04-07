@@ -6,20 +6,20 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:practice_flutter/domain/happiness/happiness_level_kind.dart';
 import 'package:practice_flutter/foundation/util/view_model.dart';
 
-part 'happiness_view_model.freezed.dart';
+part 'happiness_level_view_model.freezed.dart';
 
-final happinessViewModelProvider = StateNotifierProvider.autoDispose<HappinessViewModel, HappinessViewModelState>(
-  (ref) => HappinessViewModel(const HappinessViewModelState(), ref.read),
+final happinessViewModelProvider = StateNotifierProvider.autoDispose<HappinessViewModel, HappinessLevelViewModelState>(
+  (ref) => HappinessViewModel(const HappinessLevelViewModelState(), ref.read),
 );
 
 @freezed
-class HappinessViewModelState with _$HappinessViewModelState {
-  const factory HappinessViewModelState({
+class HappinessLevelViewModelState with _$HappinessLevelViewModelState {
+  const factory HappinessLevelViewModelState({
     @Default(null) HappinessLevelKind? happinessLevelKind,
-  }) = _HappinessViewModelState;
+  }) = _HappinessLevelViewModelState;
 }
 
-class HappinessViewModel extends ViewModel<HappinessViewModelState> {
+class HappinessViewModel extends ViewModel<HappinessLevelViewModelState> {
   HappinessViewModel(super._state, super.read);
 
   void setHappinessLevelKind(HappinessLevelKind? kind) => state = state.copyWith.call(happinessLevelKind: kind);

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'happiness_view_model.dart';
+part of 'happiness_level_view_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,29 +15,31 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$HappinessViewModelState {
+mixin _$HappinessLevelViewModelState {
   HappinessLevelKind? get happinessLevelKind =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HappinessViewModelStateCopyWith<HappinessViewModelState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $HappinessLevelViewModelStateCopyWith<HappinessLevelViewModelState>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HappinessViewModelStateCopyWith<$Res> {
-  factory $HappinessViewModelStateCopyWith(HappinessViewModelState value,
-          $Res Function(HappinessViewModelState) then) =
-      _$HappinessViewModelStateCopyWithImpl<$Res, HappinessViewModelState>;
+abstract class $HappinessLevelViewModelStateCopyWith<$Res> {
+  factory $HappinessLevelViewModelStateCopyWith(
+          HappinessLevelViewModelState value,
+          $Res Function(HappinessLevelViewModelState) then) =
+      _$HappinessLevelViewModelStateCopyWithImpl<$Res,
+          HappinessLevelViewModelState>;
   @useResult
   $Res call({HappinessLevelKind? happinessLevelKind});
 }
 
 /// @nodoc
-class _$HappinessViewModelStateCopyWithImpl<$Res,
-        $Val extends HappinessViewModelState>
-    implements $HappinessViewModelStateCopyWith<$Res> {
-  _$HappinessViewModelStateCopyWithImpl(this._value, this._then);
+class _$HappinessLevelViewModelStateCopyWithImpl<$Res,
+        $Val extends HappinessLevelViewModelState>
+    implements $HappinessLevelViewModelStateCopyWith<$Res> {
+  _$HappinessLevelViewModelStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -59,25 +61,25 @@ class _$HappinessViewModelStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$HappinessViewModelStateImplCopyWith<$Res>
-    implements $HappinessViewModelStateCopyWith<$Res> {
-  factory _$$HappinessViewModelStateImplCopyWith(
-          _$HappinessViewModelStateImpl value,
-          $Res Function(_$HappinessViewModelStateImpl) then) =
-      __$$HappinessViewModelStateImplCopyWithImpl<$Res>;
+abstract class _$$HappinessLevelViewModelStateImplCopyWith<$Res>
+    implements $HappinessLevelViewModelStateCopyWith<$Res> {
+  factory _$$HappinessLevelViewModelStateImplCopyWith(
+          _$HappinessLevelViewModelStateImpl value,
+          $Res Function(_$HappinessLevelViewModelStateImpl) then) =
+      __$$HappinessLevelViewModelStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({HappinessLevelKind? happinessLevelKind});
 }
 
 /// @nodoc
-class __$$HappinessViewModelStateImplCopyWithImpl<$Res>
-    extends _$HappinessViewModelStateCopyWithImpl<$Res,
-        _$HappinessViewModelStateImpl>
-    implements _$$HappinessViewModelStateImplCopyWith<$Res> {
-  __$$HappinessViewModelStateImplCopyWithImpl(
-      _$HappinessViewModelStateImpl _value,
-      $Res Function(_$HappinessViewModelStateImpl) _then)
+class __$$HappinessLevelViewModelStateImplCopyWithImpl<$Res>
+    extends _$HappinessLevelViewModelStateCopyWithImpl<$Res,
+        _$HappinessLevelViewModelStateImpl>
+    implements _$$HappinessLevelViewModelStateImplCopyWith<$Res> {
+  __$$HappinessLevelViewModelStateImplCopyWithImpl(
+      _$HappinessLevelViewModelStateImpl _value,
+      $Res Function(_$HappinessLevelViewModelStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +87,7 @@ class __$$HappinessViewModelStateImplCopyWithImpl<$Res>
   $Res call({
     Object? happinessLevelKind = freezed,
   }) {
-    return _then(_$HappinessViewModelStateImpl(
+    return _then(_$HappinessLevelViewModelStateImpl(
       happinessLevelKind: freezed == happinessLevelKind
           ? _value.happinessLevelKind
           : happinessLevelKind // ignore: cast_nullable_to_non_nullable
@@ -96,8 +98,9 @@ class __$$HappinessViewModelStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HappinessViewModelStateImpl implements _HappinessViewModelState {
-  const _$HappinessViewModelStateImpl({this.happinessLevelKind = null});
+class _$HappinessLevelViewModelStateImpl
+    implements _HappinessLevelViewModelState {
+  const _$HappinessLevelViewModelStateImpl({this.happinessLevelKind = null});
 
   @override
   @JsonKey()
@@ -105,14 +108,14 @@ class _$HappinessViewModelStateImpl implements _HappinessViewModelState {
 
   @override
   String toString() {
-    return 'HappinessViewModelState(happinessLevelKind: $happinessLevelKind)';
+    return 'HappinessLevelViewModelState(happinessLevelKind: $happinessLevelKind)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$HappinessViewModelStateImpl &&
+            other is _$HappinessLevelViewModelStateImpl &&
             (identical(other.happinessLevelKind, happinessLevelKind) ||
                 other.happinessLevelKind == happinessLevelKind));
   }
@@ -123,20 +126,23 @@ class _$HappinessViewModelStateImpl implements _HappinessViewModelState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$HappinessViewModelStateImplCopyWith<_$HappinessViewModelStateImpl>
-      get copyWith => __$$HappinessViewModelStateImplCopyWithImpl<
-          _$HappinessViewModelStateImpl>(this, _$identity);
+  _$$HappinessLevelViewModelStateImplCopyWith<
+          _$HappinessLevelViewModelStateImpl>
+      get copyWith => __$$HappinessLevelViewModelStateImplCopyWithImpl<
+          _$HappinessLevelViewModelStateImpl>(this, _$identity);
 }
 
-abstract class _HappinessViewModelState implements HappinessViewModelState {
-  const factory _HappinessViewModelState(
+abstract class _HappinessLevelViewModelState
+    implements HappinessLevelViewModelState {
+  const factory _HappinessLevelViewModelState(
           {final HappinessLevelKind? happinessLevelKind}) =
-      _$HappinessViewModelStateImpl;
+      _$HappinessLevelViewModelStateImpl;
 
   @override
   HappinessLevelKind? get happinessLevelKind;
   @override
   @JsonKey(ignore: true)
-  _$$HappinessViewModelStateImplCopyWith<_$HappinessViewModelStateImpl>
+  _$$HappinessLevelViewModelStateImplCopyWith<
+          _$HappinessLevelViewModelStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
