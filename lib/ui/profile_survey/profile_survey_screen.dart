@@ -19,6 +19,8 @@ class ProfileSurveyScreen extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final profileKind = ref.watch(profileSurveyViewModelProvider.select((v) => v.profileKind));
     final genderKind = ref.watch(profileSurveyViewModelProvider.select((v) => v.genderKind));
+    final selectedAnswer = ref.read(profileSurveyViewModelProvider.notifier).selectedAnswer;
+    ref.watch(profileSurveyViewModelProvider.select((v) => v.name));
 
     return Scaffold(
       appBar: AppBar(
@@ -27,53 +29,77 @@ class ProfileSurveyScreen extends HookConsumerWidget {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DropdownButton(
-              items: ProfileKind.values
-                  .map(
-                    (v) => DropdownMenuItem<ProfileKind>(
-                      value: v,
-                      child: Text(v.jp),
-                    ),
-                  )
-                  .toList(),
-              onChanged: ref.read(profileSurveyViewModelProvider.notifier).setProfileKind,
-            ),
-            const Gap(24),
-            switch (profileKind) {
-              ProfileKind.gender => Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ...GenderKind.values.map(
-                      (v) => RadioListTile(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const Gap(30),
+              DropdownButton(
+                value: profileKind,
+                items: ProfileKind.values
+                    .map(
+                      (v) => DropdownMenuItem<ProfileKind>(
                         value: v,
-                        groupValue: genderKind,
-                        onChanged: ref.read(profileSurveyViewModelProvider.notifier).setGenderKind,
+                        child: Text(v.jp),
                       ),
-                    ),
-                  ],
-                ),
-              ProfileKind.name => TextField(
-                controller: ref.read(profileSurveyViewModelProvider.notifier).nameTextController,
+                    )
+                    .toList(),
+                onChanged: ref.read(profileSurveyViewModelProvider.notifier).setProfileKind,
               ),
-              null => const SizedBox.shrink(),
-            },
-          ],
+              const Gap(24),
+              switch (profileKind) {
+                ProfileKind.gender => Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      ...GenderKind.values.map(
+                        (v) => RadioListTile(
+                          value: v,
+                          title: Text(v.jp),
+                          groupValue: genderKind,
+                          onChanged: ref.read(profileSurveyViewModelProvider.notifier).setGenderKind,
+                        ),
+                      ),
+                    ],
+                  ),
+                ProfileKind.name => TextField(
+                    onChanged: ref.read(profileSurveyViewModelProvider.notifier).setName,
+                  ),
+                null => const SizedBox.shrink(),
+              },
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
+        padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blue,
           ),
-          onPressed: () {
-            
-          },
-          child: const Text("完了"),
+          onPressed: profileKind == null || selectedAnswer.isEmpty
+              ? null
+              : () {
+                  showDialog<void>(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        backgroundColor: Colors.white,
+                        title: Text(profileKind.jp),
+                        content: Text(selectedAnswer),
+                      );
+                    },
+                  );
+                },
+          child: const Text(
+            '完了',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );

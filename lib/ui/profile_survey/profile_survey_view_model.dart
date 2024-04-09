@@ -19,16 +19,28 @@ class ProfileSurveyViewModelState with _$ProfileSurveyViewModelState {
   const factory ProfileSurveyViewModelState({
     @Default(null) ProfileKind? profileKind,
     @Default(null) GenderKind? genderKind,
+    @Default(null) String? name,
   }) = _ProfileSurveyViewModelState;
 }
 
 class ProfileSurveyViewModel extends ViewModel<ProfileSurveyViewModelState> {
   ProfileSurveyViewModel(super._state, super.read);
 
-  final nameTextController = TextEditingController();
 
   void setProfileKind(ProfileKind? value) => state = state.copyWith.call(profileKind: value);
 
   void setGenderKind(GenderKind? value) => state = state.copyWith.call(genderKind: value);
 
+  void setName(String? value) => state = state.copyWith.call(name: value);
+
+  String get selectedAnswer {
+    switch (state.profileKind) {
+      case ProfileKind.gender:
+        return state.genderKind?.jp ?? '';
+      case ProfileKind.name:
+        return state.name ?? '';
+      case null:
+        return '';
+    }
+  }
 }

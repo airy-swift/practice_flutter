@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ProfileSurveyViewModelState {
   ProfileKind? get profileKind => throw _privateConstructorUsedError;
   GenderKind? get genderKind => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfileSurveyViewModelStateCopyWith<ProfileSurveyViewModelState>
@@ -32,7 +33,7 @@ abstract class $ProfileSurveyViewModelStateCopyWith<$Res> {
       _$ProfileSurveyViewModelStateCopyWithImpl<$Res,
           ProfileSurveyViewModelState>;
   @useResult
-  $Res call({ProfileKind? profileKind, GenderKind? genderKind});
+  $Res call({ProfileKind? profileKind, GenderKind? genderKind, String? name});
 }
 
 /// @nodoc
@@ -51,6 +52,7 @@ class _$ProfileSurveyViewModelStateCopyWithImpl<$Res,
   $Res call({
     Object? profileKind = freezed,
     Object? genderKind = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
       profileKind: freezed == profileKind
@@ -61,6 +63,10 @@ class _$ProfileSurveyViewModelStateCopyWithImpl<$Res,
           ? _value.genderKind
           : genderKind // ignore: cast_nullable_to_non_nullable
               as GenderKind?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -74,7 +80,7 @@ abstract class _$$ProfileSurveyViewModelStateImplCopyWith<$Res>
       __$$ProfileSurveyViewModelStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ProfileKind? profileKind, GenderKind? genderKind});
+  $Res call({ProfileKind? profileKind, GenderKind? genderKind, String? name});
 }
 
 /// @nodoc
@@ -92,6 +98,7 @@ class __$$ProfileSurveyViewModelStateImplCopyWithImpl<$Res>
   $Res call({
     Object? profileKind = freezed,
     Object? genderKind = freezed,
+    Object? name = freezed,
   }) {
     return _then(_$ProfileSurveyViewModelStateImpl(
       profileKind: freezed == profileKind
@@ -102,6 +109,10 @@ class __$$ProfileSurveyViewModelStateImplCopyWithImpl<$Res>
           ? _value.genderKind
           : genderKind // ignore: cast_nullable_to_non_nullable
               as GenderKind?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -111,7 +122,7 @@ class __$$ProfileSurveyViewModelStateImplCopyWithImpl<$Res>
 class _$ProfileSurveyViewModelStateImpl
     implements _ProfileSurveyViewModelState {
   const _$ProfileSurveyViewModelStateImpl(
-      {this.profileKind = null, this.genderKind = null});
+      {this.profileKind = null, this.genderKind = null, this.name = null});
 
   @override
   @JsonKey()
@@ -119,10 +130,13 @@ class _$ProfileSurveyViewModelStateImpl
   @override
   @JsonKey()
   final GenderKind? genderKind;
+  @override
+  @JsonKey()
+  final String? name;
 
   @override
   String toString() {
-    return 'ProfileSurveyViewModelState(profileKind: $profileKind, genderKind: $genderKind)';
+    return 'ProfileSurveyViewModelState(profileKind: $profileKind, genderKind: $genderKind, name: $name)';
   }
 
   @override
@@ -133,11 +147,12 @@ class _$ProfileSurveyViewModelStateImpl
             (identical(other.profileKind, profileKind) ||
                 other.profileKind == profileKind) &&
             (identical(other.genderKind, genderKind) ||
-                other.genderKind == genderKind));
+                other.genderKind == genderKind) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, profileKind, genderKind);
+  int get hashCode => Object.hash(runtimeType, profileKind, genderKind, name);
 
   @JsonKey(ignore: true)
   @override
@@ -151,12 +166,15 @@ abstract class _ProfileSurveyViewModelState
     implements ProfileSurveyViewModelState {
   const factory _ProfileSurveyViewModelState(
       {final ProfileKind? profileKind,
-      final GenderKind? genderKind}) = _$ProfileSurveyViewModelStateImpl;
+      final GenderKind? genderKind,
+      final String? name}) = _$ProfileSurveyViewModelStateImpl;
 
   @override
   ProfileKind? get profileKind;
   @override
   GenderKind? get genderKind;
+  @override
+  String? get name;
   @override
   @JsonKey(ignore: true)
   _$$ProfileSurveyViewModelStateImplCopyWith<_$ProfileSurveyViewModelStateImpl>
