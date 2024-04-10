@@ -39,6 +39,8 @@ abstract class ViewModel<T> extends StateNotifier<T> {
     } on Exception catch (e, st) {
       processing = AsyncValue.error(e, st);
       rethrow;
+    } finally {
+      processing = const AsyncValue.data(null);
     }
   }
 }

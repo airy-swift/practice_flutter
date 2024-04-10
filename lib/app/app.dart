@@ -14,10 +14,6 @@ class App extends HookConsumerWidget {
       routeInformationProvider: router.routeInformationProvider,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
-      supportedLocales: const [
-        Locale('ja', ''), // Japan
-        Locale('en', ''), // English
-      ],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

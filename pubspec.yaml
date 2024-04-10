@@ -16,6 +16,7 @@ dependencies:
   go_router:
   gap:
   hooks_riverpod:
+  mobile_scanner:
 
 dev_dependencies:
   build_runner:
