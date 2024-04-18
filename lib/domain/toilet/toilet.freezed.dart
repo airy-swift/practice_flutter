@@ -30,15 +30,13 @@ mixin _$Toilets {
 
 /// @nodoc
 abstract class $ToiletsCopyWith<$Res> {
-  factory $ToiletsCopyWith(Toilets value, $Res Function(Toilets) then) =
-      _$ToiletsCopyWithImpl<$Res, Toilets>;
+  factory $ToiletsCopyWith(Toilets value, $Res Function(Toilets) then) = _$ToiletsCopyWithImpl<$Res, Toilets>;
   @useResult
   $Res call({@JsonKey(name: 'data') List<Toilet> toiletData});
 }
 
 /// @nodoc
-class _$ToiletsCopyWithImpl<$Res, $Val extends Toilets>
-    implements $ToiletsCopyWith<$Res> {
+class _$ToiletsCopyWithImpl<$Res, $Val extends Toilets> implements $ToiletsCopyWith<$Res> {
   _$ToiletsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -62,21 +60,15 @@ class _$ToiletsCopyWithImpl<$Res, $Val extends Toilets>
 
 /// @nodoc
 abstract class _$$ToiletsImplCopyWith<$Res> implements $ToiletsCopyWith<$Res> {
-  factory _$$ToiletsImplCopyWith(
-          _$ToiletsImpl value, $Res Function(_$ToiletsImpl) then) =
-      __$$ToiletsImplCopyWithImpl<$Res>;
+  factory _$$ToiletsImplCopyWith(_$ToiletsImpl value, $Res Function(_$ToiletsImpl) then) = __$$ToiletsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'data') List<Toilet> toiletData});
 }
 
 /// @nodoc
-class __$$ToiletsImplCopyWithImpl<$Res>
-    extends _$ToiletsCopyWithImpl<$Res, _$ToiletsImpl>
-    implements _$$ToiletsImplCopyWith<$Res> {
-  __$$ToiletsImplCopyWithImpl(
-      _$ToiletsImpl _value, $Res Function(_$ToiletsImpl) _then)
-      : super(_value, _then);
+class __$$ToiletsImplCopyWithImpl<$Res> extends _$ToiletsCopyWithImpl<$Res, _$ToiletsImpl> implements _$$ToiletsImplCopyWith<$Res> {
+  __$$ToiletsImplCopyWithImpl(_$ToiletsImpl _value, $Res Function(_$ToiletsImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -95,12 +87,9 @@ class __$$ToiletsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ToiletsImpl implements _Toilets {
-  const _$ToiletsImpl(
-      {@JsonKey(name: 'data') required final List<Toilet> toiletData})
-      : _toiletData = toiletData;
+  const _$ToiletsImpl({@JsonKey(name: 'data') required final List<Toilet> toiletData}) : _toiletData = toiletData;
 
-  factory _$ToiletsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ToiletsImplFromJson(json);
+  factory _$ToiletsImpl.fromJson(Map<String, dynamic> json) => _$$ToiletsImplFromJson(json);
 
   final List<Toilet> _toiletData;
   @override
@@ -118,23 +107,17 @@ class _$ToiletsImpl implements _Toilets {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ToiletsImpl &&
-            const DeepCollectionEquality()
-                .equals(other._toiletData, _toiletData));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ToiletsImpl && const DeepCollectionEquality().equals(other._toiletData, _toiletData));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_toiletData));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_toiletData));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ToiletsImplCopyWith<_$ToiletsImpl> get copyWith =>
-      __$$ToiletsImplCopyWithImpl<_$ToiletsImpl>(this, _$identity);
+  _$$ToiletsImplCopyWith<_$ToiletsImpl> get copyWith => __$$ToiletsImplCopyWithImpl<_$ToiletsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -145,9 +128,7 @@ class _$ToiletsImpl implements _Toilets {
 }
 
 abstract class _Toilets implements Toilets {
-  const factory _Toilets(
-          {@JsonKey(name: 'data') required final List<Toilet> toiletData}) =
-      _$ToiletsImpl;
+  const factory _Toilets({@JsonKey(name: 'data') required final List<Toilet> toiletData}) = _$ToiletsImpl;
 
   factory _Toilets.fromJson(Map<String, dynamic> json) = _$ToiletsImpl.fromJson;
 
@@ -156,8 +137,7 @@ abstract class _Toilets implements Toilets {
   List<Toilet> get toiletData;
   @override
   @JsonKey(ignore: true)
-  _$$ToiletsImplCopyWith<_$ToiletsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ToiletsImplCopyWith<_$ToiletsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 Toilet _$ToiletFromJson(Map<String, dynamic> json) {
@@ -180,18 +160,13 @@ mixin _$Toilet {
 
 /// @nodoc
 abstract class $ToiletCopyWith<$Res> {
-  factory $ToiletCopyWith(Toilet value, $Res Function(Toilet) then) =
-      _$ToiletCopyWithImpl<$Res, Toilet>;
+  factory $ToiletCopyWith(Toilet value, $Res Function(Toilet) then) = _$ToiletCopyWithImpl<$Res, Toilet>;
   @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'kind') int kind});
+  $Res call({@JsonKey(name: 'id') int id, @JsonKey(name: 'title') String title, @JsonKey(name: 'kind') int kind});
 }
 
 /// @nodoc
-class _$ToiletCopyWithImpl<$Res, $Val extends Toilet>
-    implements $ToiletCopyWith<$Res> {
+class _$ToiletCopyWithImpl<$Res, $Val extends Toilet> implements $ToiletCopyWith<$Res> {
   _$ToiletCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -225,24 +200,15 @@ class _$ToiletCopyWithImpl<$Res, $Val extends Toilet>
 
 /// @nodoc
 abstract class _$$ToiletImplCopyWith<$Res> implements $ToiletCopyWith<$Res> {
-  factory _$$ToiletImplCopyWith(
-          _$ToiletImpl value, $Res Function(_$ToiletImpl) then) =
-      __$$ToiletImplCopyWithImpl<$Res>;
+  factory _$$ToiletImplCopyWith(_$ToiletImpl value, $Res Function(_$ToiletImpl) then) = __$$ToiletImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: 'id') int id,
-      @JsonKey(name: 'title') String title,
-      @JsonKey(name: 'kind') int kind});
+  $Res call({@JsonKey(name: 'id') int id, @JsonKey(name: 'title') String title, @JsonKey(name: 'kind') int kind});
 }
 
 /// @nodoc
-class __$$ToiletImplCopyWithImpl<$Res>
-    extends _$ToiletCopyWithImpl<$Res, _$ToiletImpl>
-    implements _$$ToiletImplCopyWith<$Res> {
-  __$$ToiletImplCopyWithImpl(
-      _$ToiletImpl _value, $Res Function(_$ToiletImpl) _then)
-      : super(_value, _then);
+class __$$ToiletImplCopyWithImpl<$Res> extends _$ToiletCopyWithImpl<$Res, _$ToiletImpl> implements _$$ToiletImplCopyWith<$Res> {
+  __$$ToiletImplCopyWithImpl(_$ToiletImpl _value, $Res Function(_$ToiletImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -271,13 +237,9 @@ class __$$ToiletImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ToiletImpl implements _Toilet {
-  const _$ToiletImpl(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'title') required this.title,
-      @JsonKey(name: 'kind') required this.kind});
+  const _$ToiletImpl({@JsonKey(name: 'id') required this.id, @JsonKey(name: 'title') required this.title, @JsonKey(name: 'kind') required this.kind});
 
-  factory _$ToiletImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ToiletImplFromJson(json);
+  factory _$ToiletImpl.fromJson(Map<String, dynamic> json) => _$$ToiletImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -311,8 +273,7 @@ class _$ToiletImpl implements _Toilet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ToiletImplCopyWith<_$ToiletImpl> get copyWith =>
-      __$$ToiletImplCopyWithImpl<_$ToiletImpl>(this, _$identity);
+  _$$ToiletImplCopyWith<_$ToiletImpl> get copyWith => __$$ToiletImplCopyWithImpl<_$ToiletImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -323,10 +284,7 @@ class _$ToiletImpl implements _Toilet {
 }
 
 abstract class _Toilet implements Toilet {
-  const factory _Toilet(
-      {@JsonKey(name: 'id') required final int id,
-      @JsonKey(name: 'title') required final String title,
-      @JsonKey(name: 'kind') required final int kind}) = _$ToiletImpl;
+  const factory _Toilet({@JsonKey(name: 'id') required final int id, @JsonKey(name: 'title') required final String title, @JsonKey(name: 'kind') required final int kind}) = _$ToiletImpl;
 
   factory _Toilet.fromJson(Map<String, dynamic> json) = _$ToiletImpl.fromJson;
 
@@ -341,6 +299,5 @@ abstract class _Toilet implements Toilet {
   int get kind;
   @override
   @JsonKey(ignore: true)
-  _$$ToiletImplCopyWith<_$ToiletImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ToiletImplCopyWith<_$ToiletImpl> get copyWith => throw _privateConstructorUsedError;
 }

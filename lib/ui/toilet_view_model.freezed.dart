@@ -19,23 +19,18 @@ mixin _$ToiletViewModelState {
   AsyncValue<Toilets?> get toilets => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ToiletViewModelStateCopyWith<ToiletViewModelState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ToiletViewModelStateCopyWith<ToiletViewModelState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ToiletViewModelStateCopyWith<$Res> {
-  factory $ToiletViewModelStateCopyWith(ToiletViewModelState value,
-          $Res Function(ToiletViewModelState) then) =
-      _$ToiletViewModelStateCopyWithImpl<$Res, ToiletViewModelState>;
+  factory $ToiletViewModelStateCopyWith(ToiletViewModelState value, $Res Function(ToiletViewModelState) then) = _$ToiletViewModelStateCopyWithImpl<$Res, ToiletViewModelState>;
   @useResult
   $Res call({AsyncValue<Toilets?> toilets});
 }
 
 /// @nodoc
-class _$ToiletViewModelStateCopyWithImpl<$Res,
-        $Val extends ToiletViewModelState>
-    implements $ToiletViewModelStateCopyWith<$Res> {
+class _$ToiletViewModelStateCopyWithImpl<$Res, $Val extends ToiletViewModelState> implements $ToiletViewModelStateCopyWith<$Res> {
   _$ToiletViewModelStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -58,23 +53,16 @@ class _$ToiletViewModelStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ToiletViewModelStateImplCopyWith<$Res>
-    implements $ToiletViewModelStateCopyWith<$Res> {
-  factory _$$ToiletViewModelStateImplCopyWith(_$ToiletViewModelStateImpl value,
-          $Res Function(_$ToiletViewModelStateImpl) then) =
-      __$$ToiletViewModelStateImplCopyWithImpl<$Res>;
+abstract class _$$ToiletViewModelStateImplCopyWith<$Res> implements $ToiletViewModelStateCopyWith<$Res> {
+  factory _$$ToiletViewModelStateImplCopyWith(_$ToiletViewModelStateImpl value, $Res Function(_$ToiletViewModelStateImpl) then) = __$$ToiletViewModelStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AsyncValue<Toilets?> toilets});
 }
 
 /// @nodoc
-class __$$ToiletViewModelStateImplCopyWithImpl<$Res>
-    extends _$ToiletViewModelStateCopyWithImpl<$Res, _$ToiletViewModelStateImpl>
-    implements _$$ToiletViewModelStateImplCopyWith<$Res> {
-  __$$ToiletViewModelStateImplCopyWithImpl(_$ToiletViewModelStateImpl _value,
-      $Res Function(_$ToiletViewModelStateImpl) _then)
-      : super(_value, _then);
+class __$$ToiletViewModelStateImplCopyWithImpl<$Res> extends _$ToiletViewModelStateCopyWithImpl<$Res, _$ToiletViewModelStateImpl> implements _$$ToiletViewModelStateImplCopyWith<$Res> {
+  __$$ToiletViewModelStateImplCopyWithImpl(_$ToiletViewModelStateImpl _value, $Res Function(_$ToiletViewModelStateImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -93,8 +81,7 @@ class __$$ToiletViewModelStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ToiletViewModelStateImpl implements _ToiletViewModelState {
-  const _$ToiletViewModelStateImpl(
-      {this.toilets = const AsyncValue.data(null)});
+  const _$ToiletViewModelStateImpl({this.toilets = const AsyncValue.data(null)});
 
   @override
   @JsonKey()
@@ -107,10 +94,7 @@ class _$ToiletViewModelStateImpl implements _ToiletViewModelState {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ToiletViewModelStateImpl &&
-            (identical(other.toilets, toilets) || other.toilets == toilets));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ToiletViewModelStateImpl && (identical(other.toilets, toilets) || other.toilets == toilets));
   }
 
   @override
@@ -119,20 +103,15 @@ class _$ToiletViewModelStateImpl implements _ToiletViewModelState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ToiletViewModelStateImplCopyWith<_$ToiletViewModelStateImpl>
-      get copyWith =>
-          __$$ToiletViewModelStateImplCopyWithImpl<_$ToiletViewModelStateImpl>(
-              this, _$identity);
+  _$$ToiletViewModelStateImplCopyWith<_$ToiletViewModelStateImpl> get copyWith => __$$ToiletViewModelStateImplCopyWithImpl<_$ToiletViewModelStateImpl>(this, _$identity);
 }
 
 abstract class _ToiletViewModelState implements ToiletViewModelState {
-  const factory _ToiletViewModelState({final AsyncValue<Toilets?> toilets}) =
-      _$ToiletViewModelStateImpl;
+  const factory _ToiletViewModelState({final AsyncValue<Toilets?> toilets}) = _$ToiletViewModelStateImpl;
 
   @override
   AsyncValue<Toilets?> get toilets;
   @override
   @JsonKey(ignore: true)
-  _$$ToiletViewModelStateImplCopyWith<_$ToiletViewModelStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ToiletViewModelStateImplCopyWith<_$ToiletViewModelStateImpl> get copyWith => throw _privateConstructorUsedError;
 }

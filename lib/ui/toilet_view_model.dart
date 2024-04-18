@@ -1,7 +1,5 @@
-
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:practice_flutter/domain/toilet/toilet.dart';
@@ -25,7 +23,6 @@ class ToiletViewModel extends ViewModel<ToiletViewModelState> {
   ToiletViewModel(super._state, super.read);
 
   ToiletController get _toiletController => read(toiletControllerProvider);
-
 
   Future<void> fetchToilets() async {
     if (!mounted || state.toilets is AsyncLoading) {
