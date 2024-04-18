@@ -9,12 +9,13 @@ environment:
 
 dependencies:
   cupertino_icons:
+  dio:
   flutter:
     sdk: flutter
   flutter_hooks:
   freezed_annotation:
-  go_router:
   gap:
+  go_router:
   hooks_riverpod:
 
 dev_dependencies:
